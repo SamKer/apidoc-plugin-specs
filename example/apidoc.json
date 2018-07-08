@@ -1,0 +1,20 @@
+
+{
+  "name": "specdoc-example",
+  "version": "1.0.0",
+  "description": "specdoc example project",
+  "title": "Custom specDoc browser title",
+  "url" : "",
+  "header": {
+    "title": "Fonctionnal Spécification",
+    "filename": "header.md"
+  },
+  "footer": {
+    "title": "Fonctionnal Specifications written by",
+    "filename": "footer.md"
+  },
+  "template": {
+  	"withCompare": true,
+  	"withGenerator": true
+  }
+}

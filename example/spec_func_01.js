@@ -13,5 +13,22 @@
  * - sur plusieurs ligne
  * - qui précise ce qu'on veut
  *
+ * @apiSpecScreen {agile1} {images/01.png} agile screen 1
+ * spécific function 1
+ *
+ * @apiSpecScreen {agile2} {images/02.jpg} agile screen 2
+ * spécific function 1
+ *
+ * @apiSpecScreen {agile3s} {images/03.jpg} agile screen 3
+ * spécific function 1
+ *
+ * @apiSpecScreen {agile4} {images/04.jpg} agile screen 4
+ * spécific function 1
+ *
+ * @apiSpecScreen {agile5} {images/05.jpg} agile screen 5
+ * test
+ *
+ * @apiSpecScreen {agile6} {images/06.jpg} agile screen 6
+ * encore 1
  *
  */

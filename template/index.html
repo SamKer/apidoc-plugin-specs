@@ -175,6 +175,7 @@
     {{subTemplate "article-param-block" params=article.error _col1="Name" _hasType=_hasTypeInErrorFields section="error"}}
     {{subTemplate "article-team-block" params=article.spec.team _hasType=_hasTypeInParameterFields section="parameter"}}
     {{subTemplate "article-func-block" params=article.spec.func _hasType=_hasTypeInParameterFields section="parameter"}}
+    {{subTemplate "article-screen-block" params=article.spec.screen _hasType=_hasTypeInParameterFields section="parameter"}}
     {{subTemplate "article-sample-request" article=article id=id}}
   </article>
 </script>
@@ -208,28 +209,46 @@
 </script>
 <script id="template-article-func-block" type="text/x-handlebars-template">
     {{#if params.length }}
-    <h2>{{ params.length }} functions</h2>
-    <table>
-        <thead>
-        <tr>
-            <th style="width:10%;text-align:center;">spec id</th>
-            <th style="width:15%;text-align:center;">date</th>
-            <th>description</th>
-        </tr>
-        </thead>
-        <tbody>
-        {{#each params}}
-        <tr>
-            <td style="text-align:center;">{{ id }}</td>
-            <td style="text-align:center;">{{ date }}</td>
-            <td>
-                {{{nl2br description}}}
-            </td>
-        </tr>
-        {{/each}}
-        </tbody>
-    </table>
+        <h2>{{ params.length }} functions</h2>
+        <table>
+            <thead>
+            <tr>
+                <th style="width:10%;text-align:center;">spec id</th>
+                <th style="width:15%;text-align:center;">date</th>
+                <th>description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each params}}
+            <tr>
+                <td style="text-align:center;">{{ id }}</td>
+                <td style="text-align:center;">{{ date }}</td>
+                <td>
+                    {{{nl2br description}}}
+                </td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
     {{/if}}
+</script>
+<script id="template-article-screen-block" type="text/x-handlebars-template">
+  {{#if params.length }}
+      <ul class="nav nav-tabs nav-tabs-examples">
+        {{#each params}}
+        <li{{#if_eq @index compare=0}} class="active"{{/if_eq}}>
+        <a href="#{{../section}}-examples-{{../id}}-{{@index}}">{{title}}</a>
+        </li>
+        {{/each}}
+      </ul>
+      <div class="tab-content">
+        {{#each params}}
+        <div class="tab-pane{{#if_eq @index compare=0}} active{{/if_eq}}" id="{{../section}}-examples-{{../id}}-{{@index}}">
+          <img src="{{{image}}}" title="{{text}}"/>
+        </div>
+        {{/each}}
+      </div>
+  {{/if}}
 </script>
 <script id="template-article-param-block" type="text/x-handlebars-template">
   {{#if params}}

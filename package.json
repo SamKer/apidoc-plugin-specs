@@ -1,6 +1,6 @@
 {
   "name": "apidoc-plugin-specs",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Use apidoc to generate functional specifications in project",
   "main": "index.js",
   "dependencies": {

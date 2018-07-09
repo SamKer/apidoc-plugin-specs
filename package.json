@@ -1,0 +1,27 @@
+{
+  "name": "apidoc-plugin-specs",
+  "version": "1.0.0",
+  "description": "Use apidoc to generate functional specifications in project",
+  "main": "index.js",
+  "dependencies": {
+    "apidoc": "^0.17.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-specs": "apidoc -t template -i example -o tmp -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamKer/apidoc-plugin-specs.git"
+  },
+  "keywords": [
+    "apidoc"
+  ],
+  "author": "samir.keriou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamKer/apidoc-plugin-specs/issues"
+  },
+  "homepage": "https://github.com/SamKer/apidoc-plugin-specs#readme"
+}

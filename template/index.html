@@ -8,6 +8,7 @@
   <link href="vendor/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="vendor/prettify.css" rel="stylesheet" media="screen">
   <link href="css/style.css" rel="stylesheet" media="screen, print">
+    <link href="css/spec.css" rel="stylesheet" media="screen, print">
   <link href="img/favicon.ico" rel="icon" type="image/x-icon">
   <script src="vendor/polyfill.js"></script>
 </head>
@@ -88,7 +89,11 @@
 
 <script id="template-sections" type="text/x-handlebars-template">
   <section id="api-{{group}}">
-    <h1>{{underscoreToSpace title}}</h1>
+      {{ log this }}
+      {{#if ../spec}}
+      <h1>ggggggggg</h1>
+      {{/if}}
+     <h1>{{underscoreToSpace title}}</h1>
     {{#if description}}
       <p>{{{nl2br description}}}</p>
     {{/if}}
@@ -237,7 +242,7 @@
       <ul class="nav nav-tabs nav-tabs-examples">
         {{#each params}}
         <li{{#if_eq @index compare=0}} class="active"{{/if_eq}}>
-        <a href="#{{../section}}-examples-{{../id}}-{{@index}}">{{title}}</a>
+        <a href="#{{../section}}-examples-{{../id}}-{{@index}}">{{tab}}</a>
         </li>
         {{/each}}
       </ul>

@@ -9,7 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-specs": "apidoc -t template -i example -o tmp -v"
+    "generate-specs": "apidoc -t template -i example -o tmp -v",
+    "generate-specs2": "apidoc -t template -i example2 -o tmp -v --debug"
   },
   "repository": {
     "type": "git",
